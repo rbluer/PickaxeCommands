@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PickaxeCommands">
+    <output-path>$PROJECT_DIR$/../1.8 Server/plugins</output-path>
+    <root id="archive" name="PickaxeCommands.jar">
+      <element id="file-copy" path="$PROJECT_DIR$/src/com/r1ckp1ckle/pickaxecommands/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+      <element id="module-output" name="PickaxeCommands" />
+    </root>
+  </artifact>
+</component>
