@@ -1,0 +1,9 @@
+main: com.r1ckp1ckle.pickaxecommands.PickaxeCommandsCore
+name: PickaxeCommands
+version: 1.0
+author: r1ckp1ckle
+commands:
+  pcempty:
+    usage: /<command>
+    description: Does nothing. Is a template for the PickaxeCommands plugin.
+    permission: pc.admin
