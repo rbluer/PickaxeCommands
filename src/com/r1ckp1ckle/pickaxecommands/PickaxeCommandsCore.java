@@ -1,6 +1,6 @@
 package com.r1ckp1ckle.pickaxecommands;
 
-import com.r1ckp1ckle.pickaxecommands.commands.PCTest;
+import com.r1ckp1ckle.pickaxecommands.commands.PCEmpty;
 import com.r1ckp1ckle.pickaxecommands.handlers.PickaxeEventHandler;
 import com.r1ckp1ckle.pickaxecommands.utils.CommandUtils;
 import com.r1ckp1ckle.pickaxecommands.utils.ConfigurationUtils;
@@ -35,7 +35,7 @@ public class PickaxeCommandsCore extends JavaPlugin {
     }
 
     private void registerCommands() {
-        getCommand("pcempty").setExecutor(new PCTest());
+        getCommand("pcempty").setExecutor(new PCEmpty());
     }
 
     @Override
