@@ -1,7 +1,11 @@
-main: com.r1ckp1ckle.pickaxecommands.PickaxeCommandsCore
 name: PickaxeCommands
-version: 1.0
-author: r1ckp1ckle
+main: com.r1ckp1ckle.pickaxecommands.PickaxeCommandsCore
+version: "${version}"
+author: r1ckp1ckle, RoyalBlueRanger
+
+# Older versions than 1.13 will ignore this, but this will allow 1.13 and up to use newer block types?
+api-version: 1.13
+
 commands:
   pcempty:
     usage: /<command>
