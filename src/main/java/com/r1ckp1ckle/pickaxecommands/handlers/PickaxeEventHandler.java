@@ -1,26 +1,37 @@
 package com.r1ckp1ckle.pickaxecommands.handlers;
 
-import com.r1ckp1ckle.pickaxecommands.PickaxeCommandsCore;
+import java.util.HashMap;
+
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.inventory.EquipmentSlot;
+
+import com.cryptomorin.xseries.XMaterial;
+import com.r1ckp1ckle.pickaxecommands.PickaxeCommandsCore;
 
 public class PickaxeEventHandler implements Listener {
 
     @EventHandler
-    void OnPickaxeInteract(PlayerInteractEvent event){
+    void OnPickaxeInteract(PlayerInteractEvent event) {
         if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if(PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxeCommands().containsKey(event.getMaterial())) {
-                if(!PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxePerms().get(event.getMaterial()).equals("")) {
-                    if(event.getPlayer().hasPermission(PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxePerms().get(event.getMaterial()))) {
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxeCommands().get(event.getMaterial()).replace("%player%", event.getPlayer().getName()));
+        	
+        	HashMap<XMaterial, String> pCmds = PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxeCommands();
+        	HashMap<XMaterial, String> pPerms = PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxePerms();
+        	
+        	String playerName = event.getPlayer().getName();
+        	
+        	XMaterial xMat = XMaterial.matchXMaterial( event.getMaterial() );
+        	
+            if( pCmds.containsKey( xMat )) {
+                if( !pPerms.get( xMat ).equals("")) {
+                    if(event.getPlayer().hasPermission( pPerms.get( xMat ))) {
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), pCmds.get( xMat ).replace("%player%", playerName ));
                     }
-                } else {
-                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxeCommands().get(event.getMaterial()).replace("%player%", event.getPlayer().getName()));
+                } 
+                else {
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), pCmds.get( xMat ).replace("%player%", playerName));
                 }
             }
         }

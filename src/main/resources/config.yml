@@ -1,10 +1,81 @@
-WOOD_PICKAXE: 'pcempty'
-WOOD_PICKAXE_PERMS: 'pcwood'
+## 
+## For tool and item names, please use the enumeration names as defined in the library
+## XSeries with the XMaterial enum.  This ensures compatibility with Spigot 1.8 through 1.17.x.
+## 
+## You can find reference to XMaterial on github:
+##   https://github.com/CryptoMorin/XSeries/blob/master/src/main/java/com/cryptomorin/xseries/XMaterial.java
+## 
+
+
+WOODEN_PICKAXE: 'pcempty'
+WOODEN_PICKAXE_PERMS: 'pc.pickaxe.wooden'
 STONE_PICKAXE: 'pcempty'
-STONE_PICKAXE_PERMS: 'pcstone'
+STONE_PICKAXE_PERMS: 'pc.pickaxe.stone'
 IRON_PICKAXE: 'pcempty'
-IRON_PICKAXE_PERMS: 'pciron'
-GOLD_PICKAXE: 'pcempty'
-GOLD_PICKAXE_PERMS: 'pcgold'
+IRON_PICKAXE_PERMS: 'pc.pickaxe.iron'
+GOLDEN_PICKAXE: 'pcempty'
+GOLDEN_PICKAXE_PERMS: 'pc.pickaxe.golden'
 DIAMOND_PICKAXE: 'pcempty'
-DIAMOND_PICKAXE_PERMS: 'pcdiamond'
+DIAMOND_PICKAXE_PERMS: 'pc.pickaxe.diamond'
+NETHERITE_PICKAXE: 'pcempty'
+NETHERITE_PICKAXE_PERMS: 'pc.pickaxe.netherite'
+        
+WOODEN_SHOVEL: 'pcempty'
+WOODEN_SHOVEL_PERMS: 'pc.shovel.wooden'
+STONE_SHOVEL: 'pcempty'
+STONE_SHOVEL_PERMS: 'pc.pickaxe.stone'
+IRON_SHOVEL: 'pcempty'
+IRON_SHOVEL_PERMS: 'pc.pickaxe.iron'
+GOLDEN_SHOVEL: 'pcempty'
+GOLDEN_SHOVEL_PERMS: 'pc.pickaxe.golden'
+DIAMOND_SHOVEL: 'pcempty'
+DIAMOND_SHOVEL_PERMS: 'pc.pickaxe.diamond'
+NETHERITE_SHOVEL: 'pcempty'
+NETHERITE_SHOVEL_PERMS: 'pc.pickaxe.netherite'
+
+
+BOW: 'pcempty'
+BOW_PERMS: 'pc.bow'
+CROSSBOW: 'pcempty'
+CROSSBOW_PERMS: 'pc.crossbow'
+
+
+WOODEN_AXE: 'pcempty'
+WOODEN_AXE_PERMS: 'pc.axe.wooden'
+STONE_AXE: 'pcempty'
+STONE_AXE_PERMS: 'pc.axe.stone'
+IRON_AXE: 'pcempty'
+IRON_AXE_PERMS: 'pc.axe.iron'
+GOLDEN_AXE: 'pcempty'
+GOLDEN_AXE_PERMS: 'pc.axe.golden'
+DIAMOND_AXE: 'pcempty'
+DIAMOND_AXE_PERMS: 'pc.axe.diamond'
+NETHERITE_AXE: 'pcempty'
+NETHERITE_AXE_PERMS: 'pc.axe.netherite'
+
+WOODEN_SWORD: 'pcempty'
+WOODEN_SWORD_PERMS: 'pc.sword.wooden'
+STONE_SWORD: 'pcempty'
+STONE_SWORD_PERMS: 'pc.sword.stone'
+IRON_SWORD: 'pcempty'
+IRON_SWORD_PERMS: 'pc.sword.iron'
+GOLDEN_SWORD: 'pcempty'
+GOLDEN_SWORD_PERMS: 'pc.sword.golden'
+DIAMOND_SWORD: 'pcempty'
+DIAMOND_SWORD_PERMS: 'pc.sword.diamond'
+NETHERITE_SWORD: 'pcempty'
+NETHERITE_SWORD_PERMS: 'pc.sword.netherite'
+        
+WOODEN_HOE: 'pcempty'
+WOODEN_HOE_PERMS: 'pc.hoe.wooden'
+STONE_HOE: 'pcempty'
+STONE_HOE_PERMS: 'pc.hoe.stone'
+IRON_HOE: 'pcempty'
+IRON_HOE_PERMS: 'pc.hoe.iron'
+GOLDEN_HOE: 'pcempty'
+GOLDEN_HOE_PERMS: 'pc.hoe.golden'
+DIAMOND_HOE: 'pcempty'
+DIAMOND_HOE_PERMS: 'pc.hoe.diamond'
+NETHERITE_HOE: 'pcempty'
+NETHERITE_HOE_PERMS: 'pc.hoe.netherite'
+
