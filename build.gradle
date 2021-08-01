@@ -74,8 +74,8 @@ You are building the PickaxeCommands plugin
   Build time: ${getCurrentTimestamp()}
 
 Output files are located in /build/libs
-The runnable JAR is usually named PickaxeCommands.jar
-Example: The spigot build artifact is build/libs/PickaxeCommands.jar
+The runnable JAR is usually named PickaxeCommands-${project.version}.jar
+Example: The spigot build artifact is build/libs/PickaxeCommands-${project.version}.jar
 ==========================================================================
 """
 
