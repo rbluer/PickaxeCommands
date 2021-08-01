@@ -15,7 +15,7 @@ public class PickaxeEventHandler implements Listener {
 
     @EventHandler
     void OnPickaxeInteract(PlayerInteractEvent event) {
-        if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+        if( event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK ) {
         	
         	HashMap<XMaterial, String> pCmds = PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxeCommands();
         	HashMap<XMaterial, String> pPerms = PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxePerms();
@@ -26,7 +26,7 @@ public class PickaxeEventHandler implements Listener {
         	
             if( pCmds.containsKey( xMat )) {
                 if( !pPerms.get( xMat ).equals("")) {
-                    if(event.getPlayer().hasPermission( pPerms.get( xMat ))) {
+                    if( event.getPlayer().hasPermission( pPerms.get( xMat ) )) {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), pCmds.get( xMat ).replace("%player%", playerName ));
                     }
                 } 

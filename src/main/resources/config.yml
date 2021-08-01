@@ -38,6 +38,12 @@ BOW: 'pcempty'
 BOW_PERMS: 'pc.bow'
 CROSSBOW: 'pcempty'
 CROSSBOW_PERMS: 'pc.crossbow'
+TRIDENT:  'pcempty'
+TRIDENT_PERMS: 'pc.trident'
+STICK:  'pcempty'
+STICK_PERMS: 'pc.stick'
+BLAZE_ROD:  'pcempty'
+BLAZE_ROD_PERMS:  'pc.blazerod'
 
 
 WOODEN_AXE: 'pcempty'

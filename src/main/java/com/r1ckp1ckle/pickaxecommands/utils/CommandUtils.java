@@ -27,6 +27,9 @@ public class CommandUtils {
 
         addCommand( XMaterial.BOW, pickaxeCommands );
         addCommand( XMaterial.CROSSBOW, pickaxeCommands );
+        addCommand( XMaterial.STICK, pickaxeCommands );
+        addCommand( XMaterial.TRIDENT, pickaxeCommands );
+        addCommand( XMaterial.BLAZE_ROD, pickaxeCommands );
 
         addCommand( XMaterial.WOODEN_AXE, pickaxeCommands );
         addCommand( XMaterial.STONE_AXE, pickaxeCommands );
@@ -69,6 +72,9 @@ public class CommandUtils {
 
         addPermission( XMaterial.BOW, pickaxePerms );
         addPermission( XMaterial.CROSSBOW, pickaxePerms );
+        addPermission( XMaterial.STICK, pickaxePerms );
+        addPermission( XMaterial.TRIDENT, pickaxePerms );
+        addPermission( XMaterial.BLAZE_ROD, pickaxePerms );
 
         addPermission( XMaterial.WOODEN_AXE, pickaxePerms );
         addPermission( XMaterial.STONE_AXE, pickaxePerms );
