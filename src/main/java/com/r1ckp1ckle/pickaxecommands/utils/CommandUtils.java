@@ -1,23 +1,26 @@
 package com.r1ckp1ckle.pickaxecommands.utils;
 
-import com.r1ckp1ckle.pickaxecommands.PickaxeCommandsCore;
-import org.bukkit.Material;
-
 import java.util.HashMap;
 
-public class CommandUtils {
-    private HashMap<Material, String> pickaxeCommands = new HashMap<>();
-    private HashMap<Material, String> pickaxePerms = new HashMap<>();
+import org.bukkit.Material;
 
-    public void registerPickaxeCommands(HashMap<Material, String> pickaxeCommands) {
+import com.cryptomorin.xseries.XMaterial;
+import com.r1ckp1ckle.pickaxecommands.PickaxeCommandsCore;
+
+public class CommandUtils {
+    private HashMap<XMaterial, String> pickaxeCommands = new HashMap<>();
+    private HashMap<XMaterial, String> pickaxePerms = new HashMap<>();
+
+    public void registerPickaxeCommands(HashMap<XMaterial, String> pickaxeCommands) {
+    	
         pickaxeCommands.put(Material.WOOD_PICKAXE, stringToCommand(PickaxeCommandsCore.getInstance().getConfig().getString("WOOD_PICKAXE")));
         pickaxeCommands.put(Material.STONE_PICKAXE, stringToCommand(PickaxeCommandsCore.getInstance().getConfig().getString("STONE_PICKAXE")));
         pickaxeCommands.put(Material.IRON_PICKAXE, stringToCommand(PickaxeCommandsCore.getInstance().getConfig().getString("IRON_PICKAXE")));
         pickaxeCommands.put(Material.GOLD_PICKAXE, stringToCommand(PickaxeCommandsCore.getInstance().getConfig().getString("GOLD_PICKAXE")));
         pickaxeCommands.put(Material.DIAMOND_PICKAXE, stringToCommand(PickaxeCommandsCore.getInstance().getConfig().getString("DIAMOND_PICKAXE")));
     }
-
-    public void registerPickaxePerms(HashMap<Material, String> pickaxeCommands) {
+    
+    public void registerPickaxePerms(HashMap<XMaterial, String> pickaxeCommands) {
         pickaxeCommands.put(Material.WOOD_PICKAXE, stringToCommand(PickaxeCommandsCore.getInstance().getConfig().getString("WOOD_PICKAXE_PERMS")));
         pickaxeCommands.put(Material.STONE_PICKAXE, stringToCommand(PickaxeCommandsCore.getInstance().getConfig().getString("STONE_PICKAXE_PERMS")));
         pickaxeCommands.put(Material.IRON_PICKAXE, stringToCommand(PickaxeCommandsCore.getInstance().getConfig().getString("IRON_PICKAXE_PERMS")));

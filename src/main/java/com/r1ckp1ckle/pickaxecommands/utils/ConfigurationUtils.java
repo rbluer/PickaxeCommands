@@ -1,11 +1,12 @@
 package com.r1ckp1ckle.pickaxecommands.utils;
 
-import com.r1ckp1ckle.pickaxecommands.PickaxeCommandsCore;
+import java.io.File;
+import java.util.logging.Level;
+
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
-import java.io.File;
-import java.util.logging.Level;
+import com.r1ckp1ckle.pickaxecommands.PickaxeCommandsCore;
 
 public class ConfigurationUtils {
     private PickaxeCommandsCore pickaxeCommandsCore;
