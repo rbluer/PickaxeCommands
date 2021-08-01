@@ -11,3 +11,7 @@ commands:
     usage: /<command>
     description: Does nothing. Is a template for the PickaxeCommands plugin.
     permission: pc.admin
+  pcreload:
+    usage: /<command>
+    description: reloads the config file settings
+    permission: pc.admin

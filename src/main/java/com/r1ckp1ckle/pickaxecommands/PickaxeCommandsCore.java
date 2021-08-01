@@ -1,11 +1,13 @@
 package com.r1ckp1ckle.pickaxecommands;
 
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.java.JavaPlugin;
+
 import com.r1ckp1ckle.pickaxecommands.commands.PCEmpty;
+import com.r1ckp1ckle.pickaxecommands.commands.PCReload;
 import com.r1ckp1ckle.pickaxecommands.handlers.PickaxeEventHandler;
 import com.r1ckp1ckle.pickaxecommands.utils.CommandUtils;
 import com.r1ckp1ckle.pickaxecommands.utils.ConfigurationUtils;
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.java.JavaPlugin;
 
 public class PickaxeCommandsCore extends JavaPlugin {
     private static PickaxeCommandsCore instance;
@@ -36,6 +38,7 @@ public class PickaxeCommandsCore extends JavaPlugin {
 
     private void registerCommands() {
         getCommand("pcempty").setExecutor(new PCEmpty());
+        getCommand("pcreload").setExecutor(new PCReload( this ));
     }
 
     @Override
