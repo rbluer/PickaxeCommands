@@ -40,8 +40,8 @@ public class PickaxeEventHandler implements Listener {
         	
         	// Need to exit as quickly as possible if there is no material match in the configs.
         	// Process if there are no perms, or the player has the required perms:
-        	if ( cmd != null && !cmd.trim().isEmpty() && !"pcempty".equalsIgnoreCase( cmd ) &&
-        			( pPerms.get( xMat ).equals("") || event.getPlayer().hasPermission( pPerms.get( xMat ) ) )) {
+        	if ( cmd != null && !cmd.trim().isEmpty() && 
+        			( !pPerms.containsKey( xMat ) || event.getPlayer().hasPermission( pPerms.get( xMat ) ) )) {
         		
         		String playerName = event.getPlayer().getName();
         		

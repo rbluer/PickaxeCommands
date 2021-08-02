@@ -28,8 +28,8 @@ public class PCReload
 	    	commandUtils.getPickaxeCommands().clear();
 	    	commandUtils.getPickaxePerms().clear();
 	    	
-	        commandUtils.registerPickaxeCommands(commandUtils.getPickaxeCommands());
-	        commandUtils.registerPickaxePerms(commandUtils.getPickaxePerms());
+	        commandUtils.registerPickaxeCommands();
+	        commandUtils.registerPickaxePerms();
 	    	
 	        return true;
 	    }

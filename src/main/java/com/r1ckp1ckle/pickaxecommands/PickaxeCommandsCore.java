@@ -32,8 +32,8 @@ public class PickaxeCommandsCore extends JavaPlugin {
         configurationUtils = new ConfigurationUtils(this);
         
         commandUtils = new CommandUtils();
-        commandUtils.registerPickaxeCommands(commandUtils.getPickaxeCommands());
-        commandUtils.registerPickaxePerms(commandUtils.getPickaxePerms());
+        commandUtils.registerPickaxeCommands();
+        commandUtils.registerPickaxePerms();
         
         registerListeners();
         registerCommands();
