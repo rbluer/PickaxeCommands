@@ -14,39 +14,48 @@ import com.r1ckp1ckle.pickaxecommands.PickaxeCommandsCore;
 
 public class PickaxeEventHandler implements Listener {
 
+	private HashMap<XMaterial, String> pCmds;
+	private HashMap<XMaterial, String> pPerms;
+	
+	
+	public PickaxeEventHandler() {
+		super();
+		
+		// Set local references to the two HashMaps to help ensure better performance 
+		// when evaluating of this event should be handled or not
+		pCmds = PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxeCommands();
+		pPerms = PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxePerms();
+		
+	}
+	
     @EventHandler
     void OnPickaxeInteract(PlayerInteractEvent event) {
+    	
         if( event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK ) {
-        	
-        	HashMap<XMaterial, String> pCmds = PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxeCommands();
-        	HashMap<XMaterial, String> pPerms = PickaxeCommandsCore.getInstance().getCommandUtils().getPickaxePerms();
-        	
-        	String playerName = event.getPlayer().getName();
-        	CommandSender cmdRunner = Bukkit.getConsoleSender();
         	
         	XMaterial xMat = XMaterial.matchXMaterial( event.getMaterial() );
         	String cmd = pCmds.get( xMat );
         	
-        	// Replace any use of {player} placeholder in the command, with the player's name. 
-        	cmd = replacePlaceholder( "player", playerName, cmd );
-
-        	// Checks to see if the command should be ran as the player, or as console:
-        	if ( containsPlaceholder( "runAsPlayer", cmd ) ) {
-        		cmd = replacePlaceholder( "runAsPlayer", "", cmd );
-        		cmdRunner = event.getPlayer();
+        	// Need to exit as quickly as possible if there is no material match in the configs.
+        	// Process if there are no perms, or the player has the required perms:
+        	if ( cmd != null && !cmd.trim().isEmpty() && "pcempty".equalsIgnoreCase( cmd ) &&
+        			( pPerms.get( xMat ).equals("") || event.getPlayer().hasPermission( pPerms.get( xMat ) ) )) {
+        		
+        		String playerName = event.getPlayer().getName();
+        		CommandSender cmdRunner = Bukkit.getConsoleSender();
+        		
+        		// Replace any use of {player} placeholder in the command, with the player's name. 
+        		cmd = replacePlaceholder( "player", playerName, cmd );
+        		
+        		// Checks to see if the command should be ran as the player, or as console:
+        		if ( containsPlaceholder( "runAsPlayer", cmd ) ) {
+        			cmd = replacePlaceholder( "runAsPlayer", "", cmd );
+        			cmdRunner = event.getPlayer();
+        		}
+        		
+        		Bukkit.dispatchCommand( cmdRunner, cmd);
         	}
         	
-        	
-            if( pCmds.containsKey( xMat )) {
-                if( !pPerms.get( xMat ).equals("")) {
-                    if( event.getPlayer().hasPermission( pPerms.get( xMat ) )) {
-                        Bukkit.dispatchCommand( cmdRunner, cmd);
-                    }
-                } 
-                else {
-                    Bukkit.dispatchCommand( cmdRunner, cmd);
-                }
-            }
         }
     }
     
