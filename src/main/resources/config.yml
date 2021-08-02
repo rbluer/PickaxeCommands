@@ -5,6 +5,26 @@
 ## You can find reference to XMaterial on github:
 ##   https://github.com/CryptoMorin/XSeries/blob/master/src/main/java/com/cryptomorin/xseries/XMaterial.java
 ## 
+## The command must be a command that is runnable from the console.  IF it cannot be ran from the console,
+## then it will not work here.  All commands are ran as bukkit's CommandSender, which is the same as 
+## running it as OP.
+##
+## There is an alternative to using the CommandSender to run these commands, and that is running the 
+## command as the player. This option is possile if using the placeholder '{runAsPlayer}'. This 
+## placeholder can be placed anywhere within the command since it will be removed prior to running 
+## the command. If you are using this placeholder, then it must be specified on each tool's command
+## set.
+## 
+## You can use the placeholder '{player}' to insert the player's name in the command. 
+## 
+## Placeholders can use either { } or % % as escape characters.  Either works well.
+## 
+## 
+## The permissions must be a plain permissions if used. It cannot be a group permission. 
+## If permissions are not to be used, then make it an empty String value.  Use '' and not ' '.
+## 
+## 
+## 
 
 
 WOODEN_PICKAXE: 'pcempty'
