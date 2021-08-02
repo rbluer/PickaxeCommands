@@ -112,7 +112,7 @@ public class CommandUtils {
     
     private String stringToCommand(String cmd) {
         String newCmd = cmd;
-        if(cmd.charAt(0) == '/') {
+        if( cmd != null && !cmd.isEmpty() && cmd.charAt(0) == '/') {
             newCmd = cmd.substring(1);
         }
         return newCmd;
