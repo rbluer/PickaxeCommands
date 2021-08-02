@@ -52,6 +52,36 @@ public class CommandUtils {
         addCommand( XMaterial.DIAMOND_HOE, pickaxeCommands );
         addCommand( XMaterial.NETHERITE_HOE, pickaxeCommands );
 
+        
+        addCommand( XMaterial.LEATHER_HELMET, pickaxeCommands );
+        addCommand( XMaterial.CHAINMAIL_HELMET, pickaxeCommands );
+        addCommand( XMaterial.IRON_HELMET, pickaxeCommands );
+        addCommand( XMaterial.GOLDEN_HELMET, pickaxeCommands );
+        addCommand( XMaterial.DIAMOND_HELMET, pickaxeCommands );
+        addCommand( XMaterial.NETHERITE_HELMET, pickaxeCommands );
+        addCommand( XMaterial.TURTLE_HELMET, pickaxeCommands );
+        
+        addCommand( XMaterial.LEATHER_CHESTPLATE, pickaxeCommands );
+        addCommand( XMaterial.CHAINMAIL_CHESTPLATE, pickaxeCommands );
+        addCommand( XMaterial.IRON_CHESTPLATE, pickaxeCommands );
+        addCommand( XMaterial.GOLDEN_CHESTPLATE, pickaxeCommands );
+        addCommand( XMaterial.DIAMOND_CHESTPLATE, pickaxeCommands );
+        addCommand( XMaterial.NETHERITE_CHESTPLATE, pickaxeCommands );
+        
+        addCommand( XMaterial.LEATHER_LEGGINGS, pickaxeCommands );
+        addCommand( XMaterial.CHAINMAIL_LEGGINGS, pickaxeCommands );
+        addCommand( XMaterial.IRON_LEGGINGS, pickaxeCommands );
+        addCommand( XMaterial.GOLDEN_LEGGINGS, pickaxeCommands );
+        addCommand( XMaterial.DIAMOND_LEGGINGS, pickaxeCommands );
+        addCommand( XMaterial.NETHERITE_LEGGINGS, pickaxeCommands );
+
+        addCommand( XMaterial.LEATHER_BOOTS, pickaxeCommands );
+        addCommand( XMaterial.CHAINMAIL_BOOTS, pickaxeCommands );
+        addCommand( XMaterial.IRON_BOOTS, pickaxeCommands );
+        addCommand( XMaterial.GOLDEN_BOOTS, pickaxeCommands );
+        addCommand( XMaterial.DIAMOND_BOOTS, pickaxeCommands );
+        addCommand( XMaterial.NETHERITE_BOOTS, pickaxeCommands );
+
     }
 
     public void registerPickaxePerms( HashMap<XMaterial, String> pickaxePerms ) {
@@ -97,6 +127,35 @@ public class CommandUtils {
         addPermission( XMaterial.DIAMOND_HOE, pickaxePerms );
         addPermission( XMaterial.NETHERITE_HOE, pickaxePerms );
 
+        
+        addPermission( XMaterial.LEATHER_HELMET, pickaxePerms );
+        addPermission( XMaterial.CHAINMAIL_HELMET, pickaxePerms );
+        addPermission( XMaterial.IRON_HELMET, pickaxePerms );
+        addPermission( XMaterial.GOLDEN_HELMET, pickaxePerms );
+        addPermission( XMaterial.DIAMOND_HELMET, pickaxePerms );
+        addPermission( XMaterial.NETHERITE_HELMET, pickaxePerms );
+        addPermission( XMaterial.TURTLE_HELMET, pickaxePerms );
+        
+        addPermission( XMaterial.LEATHER_CHESTPLATE, pickaxePerms );
+        addPermission( XMaterial.CHAINMAIL_CHESTPLATE, pickaxePerms );
+        addPermission( XMaterial.IRON_CHESTPLATE, pickaxePerms );
+        addPermission( XMaterial.GOLDEN_CHESTPLATE, pickaxePerms );
+        addPermission( XMaterial.DIAMOND_CHESTPLATE, pickaxePerms );
+        addPermission( XMaterial.NETHERITE_CHESTPLATE, pickaxePerms );
+        
+        addPermission( XMaterial.LEATHER_LEGGINGS, pickaxePerms );
+        addPermission( XMaterial.CHAINMAIL_LEGGINGS, pickaxePerms );
+        addPermission( XMaterial.IRON_LEGGINGS, pickaxePerms );
+        addPermission( XMaterial.GOLDEN_LEGGINGS, pickaxePerms );
+        addPermission( XMaterial.DIAMOND_LEGGINGS, pickaxePerms );
+        addPermission( XMaterial.NETHERITE_LEGGINGS, pickaxePerms );
+
+        addPermission( XMaterial.LEATHER_BOOTS, pickaxePerms );
+        addPermission( XMaterial.CHAINMAIL_BOOTS, pickaxePerms );
+        addPermission( XMaterial.IRON_BOOTS, pickaxePerms );
+        addPermission( XMaterial.GOLDEN_BOOTS, pickaxePerms );
+        addPermission( XMaterial.DIAMOND_BOOTS, pickaxePerms );
+        addPermission( XMaterial.NETHERITE_BOOTS, pickaxePerms );
     }
 
     private void addCommand( XMaterial xMat, HashMap<XMaterial, String> pickaxeCommands ) {
