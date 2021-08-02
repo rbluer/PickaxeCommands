@@ -12,8 +12,8 @@
 ## There is an alternative to using the CommandSender to run these commands, and that is running the 
 ## command as the player. This option is possile if using the placeholder '{runAsPlayer}'. This 
 ## placeholder can be placed anywhere within the command since it will be removed prior to running 
-## the command. If you are using this placeholder, then it must be specified on each tool's command
-## set.
+## the command. If you are using this placeholder, then it must be specified on each command, or 
+## sub command, where it needs to be used.
 ## 
 ## You can use the placeholder '{player}' to insert the player's name in the command. 
 ## 
@@ -23,6 +23,20 @@
 ## The permissions must be a plain permissions if used. It cannot be a group permission. 
 ## If permissions are not to be used, then make it an empty String value.  Use '' and not ' '.
 ## 
+## More than one command can be included in each item.  Use a ';' to seperate each command.
+## All commands must be within the same quoted text.  If you need to use '{runAsPlayer]' 
+## in more than one command, then it must be specified in each occurance. There technically
+## are no limitation on the number of commands you can include.
+##
+## Please note that if sub-commands are used, they will be submitted to run back-to-back, 
+## but there are no guarantees that they will be executed in the same order. There is also
+## a good chance that one or more of the commands may also resubmit their command to run
+## in the near future.  So do not expect that all these commands will run, or complete 
+## in any specific order.
+##
+## Example using multiple sub-commands in one item command. One of the sub-commands is using
+## the '{runAsPlayer}' placeholder:
+## DIAMOND_PICKAXE: 'eco give {player} 1000;broadcast Hey!! {player} just got 1000!!;{runAsPlayer}balance {player};eco take {player} 1000;broadcast oof!! {player} just lost 1000. Too bad!'
 ## 
 ## 
 

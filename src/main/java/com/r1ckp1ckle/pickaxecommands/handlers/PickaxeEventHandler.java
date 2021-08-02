@@ -1,6 +1,8 @@
 package com.r1ckp1ckle.pickaxecommands.handlers;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
@@ -42,18 +44,27 @@ public class PickaxeEventHandler implements Listener {
         			( pPerms.get( xMat ).equals("") || event.getPlayer().hasPermission( pPerms.get( xMat ) ) )) {
         		
         		String playerName = event.getPlayer().getName();
-        		CommandSender cmdRunner = Bukkit.getConsoleSender();
         		
         		// Replace any use of {player} placeholder in the command, with the player's name. 
         		cmd = replacePlaceholder( "player", playerName, cmd );
         		
-        		// Checks to see if the command should be ran as the player, or as console:
-        		if ( containsPlaceholder( "runAsPlayer", cmd ) ) {
-        			cmd = replacePlaceholder( "runAsPlayer", "", cmd );
-        			cmdRunner = event.getPlayer();
-        		}
+        		List<String> cmds = Arrays.asList( cmd.split( ";" ) );
         		
-        		Bukkit.dispatchCommand( cmdRunner, cmd);
+        		for ( String command : cmds ) {
+					
+        			if ( command != null && !command.trim().isEmpty() ) {
+        				
+        				CommandSender cmdRunner = Bukkit.getConsoleSender();
+        				
+        				// Checks to see if the command should be ran as the player, or as console:
+        				if ( containsPlaceholder( "runAsPlayer", command ) ) {
+        					command = replacePlaceholder( "runAsPlayer", "", command );
+        					cmdRunner = event.getPlayer();
+        				}
+        				
+        				Bukkit.dispatchCommand( cmdRunner, command );
+        			}
+				}
         	}
         	
         }
