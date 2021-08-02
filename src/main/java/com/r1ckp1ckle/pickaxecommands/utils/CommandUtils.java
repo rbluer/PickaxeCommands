@@ -100,8 +100,10 @@ public class CommandUtils {
     }
 
     private void addCommand( XMaterial xMat, HashMap<XMaterial, String> pickaxeCommands ) {
-    	pickaxeCommands.put( xMat, stringToCommand(
-    						PickaxeCommandsCore.getInstance().getConfig().getString( xMat.name() )));
+    	String cmd = stringToCommand( 
+    					PickaxeCommandsCore.getInstance().getConfig().getString( xMat.name() ));
+    
+    	pickaxeCommands.put( xMat, cmd);
     }
     private void addPermission( XMaterial xMat, HashMap<XMaterial, String> pickaxePerms ) {
     	pickaxePerms.put( xMat, stringToCommand(
